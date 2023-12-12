@@ -27,7 +27,7 @@ ul {
 
 /* Header and Navigation */
 header {
-    background-color: #343a40;
+    background-color: #000000;
     color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -56,6 +56,11 @@ main {
     margin: 30px auto;
 }
 
+.main-title{
+    text-align: center;
+    text-decoration: underline;
+}
+/*grid for about me page */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -63,7 +68,7 @@ main {
 }
 
 article {
-    background-color: white;
+    background-color: rgb(202, 199, 199);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -78,25 +83,37 @@ article:hover {
 article h2 {
     color: #343a40;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+}
+/* Image Styling in About Me Page */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+    margin: 20px 0; 
 }
 
-/* Typography and Paragraphs */
-p {
-    margin-bottom: 15px;
+.about-img {
+    flex: 1; 
+    max-width: calc(50% - 10px); 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
+
 
 /* Footer Styles */
 footer {
-    background-color: #343a40; /* Dark background for contrast */
-    color: #f8f9fa; /* Light text for readability */
+    background-color: #343a40; 
+    color: #f8f9fa;
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
 }
 
 
-/* Buttons and Call-to-Action */
+/* Buttons*/
 button, .button {
     display: inline-block;
     background-color: #17a2b8;
@@ -124,7 +141,7 @@ img:hover {
     transform: scale(1.03);
 }
 
-/* Box Shadows for Input Fields (if any) */
+/* Box Shadows for Input Fields (if I choose any) */
 input, textarea {
     transition: box-shadow 0.3s ease-in-out;
     border: 1px solid #ced4da;
@@ -136,7 +153,146 @@ input:focus, textarea:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
 }
-/* Contact Me Specifics */
+/*Services page specifics */
+
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.custom-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.custom-form input[type="text"],
+.custom-form input[type="email"],
+.custom-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.custom-form button {
+    width: 20%;
+    padding: 9px;
+    background-color: #00aaff;
+    color: rgb(252, 252, 252);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top:10px;
+}
+
+.custom-form button:hover {
+    background-color: #004e6d;
+}
+
+.animation-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.animation-container div {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.bounce-animation {
+    animation: bounce 1s infinite;
+}
+
+/* Fade Animation */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-animation {
+    animation: fade 4s infinite alternate;
+}
+
+/* Slide Animation in Services page*/
+@keyframes slide {
+    from { transform: translateX(0px); }
+    to { transform: translateX(100px); }
+}
+
+.slide-animation {
+    animation: slide 5s forwards infinite alternate;
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #FFC107;
+}
+
+.advanced-css-container2 {
+    margin-top: 20px;
+}
+
+.flexbox-example2 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.flex-item2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+    margin: 5px;
+}
+
+.grid-example2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+/* Contact Me page Specifics */
 
 #contactMeh1 {
     text-align: center;
@@ -144,6 +300,8 @@ input:focus, textarea:focus {
     padding-bottom: 15px;
     margin-top: 0;
     margin-bottom: 0;
+    text-decoration: underline;
+   
     
 }
 
@@ -204,6 +362,22 @@ input:focus, textarea:focus {
         grid-template-columns: 1fr;
     }
     .social-media {
+        grid-template-columns: 1fr;
+    }
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-img {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+    .image-container {
+        flex-direction: column;
+    }
+}
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .responsive-grid {
         grid-template-columns: 1fr;
     }
 }
